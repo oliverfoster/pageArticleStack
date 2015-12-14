@@ -1,19 +1,46 @@
 .page-article-stack {
+
+	.page-header {
+		display:none;
+	}
 	
+	.article, .block {
+		background-color: transparent;
+	}
+
 	.article-positioning {
 		position: absolute;
-	    top: 0%;
-	    left: 0%;
-	    right: 0%;
-	    bottom: inherit;
-	    overflow: hidden;
+	    width:100%;
+	}
+
+	.article-next.article-positioning-in {
+		z-index: 1;
+	}
+
+	.article-next.article-positioning-out {
+		z-index: 0;
+	}
+
+	.article-previous.article-positioning-in {
+		z-index: 0;
+	}
+
+	.article-previous.article-positioning-out {
+		z-index: 1;
 	}
 
 	.article-disabled {
-		display:none;
+		position:absolute;
+		bottom:100%;
+		width:100%;
 	}
 
 	.article-current {
 		display: initial;
+		position: initial;
 	}
+}
+
+html {
+	overflow-x: hidden;
 }
